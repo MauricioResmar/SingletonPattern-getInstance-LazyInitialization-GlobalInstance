@@ -1,0 +1,12 @@
+@startuml
+class Aplication {
+- {static} Aplication aplication
+~ boolean isRunning
+- <<Create>> Aplication()
++ {static} Aplication getInstance()
++ void Run()
+}
+class Main {
++ {static} void main(String[])
+}
+@enduml

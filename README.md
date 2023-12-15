@@ -33,10 +33,10 @@ Various mechanisms, such as locking, can be applied to ensure the secure creatio
 
 Java Code Example:
 
-public class Singleton {
+    public class Singleton {
 
-private static Singleton instance;
-int counter;
+    private static Singleton instance;
+    int counter;
 
     private Singleton() {} // Private constructor to avoid direct instantiation
 
@@ -58,7 +58,7 @@ int counter;
     }
 }
 --------------------------------------------------------------------------
-Uml Diagram:
+Uml Diagram Class Singleton Pattern:
 
                   +------------------------------+
                   |           Class Main         |
@@ -67,30 +67,34 @@ Uml Diagram:
                   +------------------------------+
                   |                              |
                   | + main(args: String[]): void |
-                  +------------------------------+
-                                  |
-                                  |
-                                  v
-                  +------------------------------+
-                  | Class Aplication (Singleton) |
-                  +------------------------------+
-                  | - aplication: Aplication     |
-                  | - isRunning: boolean         |
-                  +------------------------------+
-                  | + getInstance(): Aplication  |
-                  | + Run(): void                |
-                  +------------------------------+
+                  +------------------------------+                              
+                                  
+                                  
+                  +-------------------------------+
+                  | Class Aplication (Singleton)  |
+                  +-------------------------------+
+                  | - aplication: Aplication      |
+                  | ~ isRunning: boolean          |
+                  +-------------------------------+
+                  | - <<Constructor>> Aplication()| 
+                  | + getInstance(): Aplication   |
+                  | + Run(): void                 |
+                  +-------------------------------+
 
 --------------------------------------------------------------------------
-Resume Singleton:
+Resume Singleton Diagram Class Uml:
 
-+----------------------------------+
-|             Singleton            |
-+----------------------------------+
-| - instance: Singleton            |
-+----------------------------------+
-| + getInstance(): Singleton       |
-+----------------------------------+
+                +----------------------------------+
+                |             Singleton            |
+                +----------------------------------+
+                | - instance: Singleton            | 
+                | ~ Counter : int                  | 
+                +----------------------------------+
+                |- <<Constructor>> Singleton()     |  
+                |+ getInstance() : Singleton       | 
+                |+ getCounter () : int             | 
+                |+ setCounter(counter : int) : void| 
+                +----------------------------------+
 
 
 
